@@ -1,27 +1,29 @@
-open class Empleado(val Nombre: String, val Sueldo: Double) {
+package ejercicio10
+
+open class Empleado(val nombre: String, val Sueldo: Double) {
     open fun trabajar() {
-        println("$Nombre esta realizando sus tareas")
+        println("$nombre esta realizando sus tareas")
     }
 }
 
-class Desarrollador(Nombre: String, Sueldo: Double, val lenguaje: String) :
-    Empleado(Nombre, Sueldo) {
+class Desarrollador(nombre: String, Sueldo: Double, val lenguaje: String) :
+    Empleado(nombre, Sueldo) {
     override fun trabajar() {
         super.trabajar()
-        println("$Nombre esta programando en $lenguaje.")
+        println("$nombre esta programando en $lenguaje.")
     }
 }
 
-class Disenador(Nombre: String, Sueldo: Double, val herramienta: String) :
-    Empleado(Nombre, Sueldo) {
+class Disenador(nombre: String, Sueldo: Double, val herramienta: String) :
+    Empleado(nombre, Sueldo) {
     override fun trabajar() {
         super.trabajar()
-        println("$Nombre esta diseñando interfaces en $herramienta.")
+        println("$nombre esta disenando interfaces en $herramienta.")
     }
 }
 fun main(){
     val dev = Desarrollador("Martin", 4000.0, "Kotlin")
-    val designer = Disenador("Romina", 6000.0, "Figma")
+    val designer= Disenador("Romina", 6000.0, "Figma")
 
     dev.trabajar()
     designer.trabajar()
