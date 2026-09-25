@@ -1,3 +1,5 @@
+package ejercicio5
+
 class Producto(val nombre: String, val precio: Double){
     var precioFinal: Double = precio
     constructor(nombre: String, precio:Double, descuento:Int) : this(nombre, precio){
